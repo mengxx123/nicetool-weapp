@@ -1,0 +1,31 @@
+{
+    "pages":[
+        "pages/index/index",
+        "pages/about/index",
+        "pages/run/run"
+    ],
+    "window":{
+        "backgroundTextStyle":"light",
+        "navigationBarBackgroundColor": "#4285f4",
+        "navigationBarTitleText": "好工具（NiceTool）",
+        "navigationBarTextStyle": "#fff"
+    },
+    "tabBar": {
+        "color": "#999",
+        "selectedColor": "#4285f4",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "/static/img/home.png",
+                "selectedIconPath": "/static/img/home_active.png"
+            },
+            {
+                "pagePath": "pages/about/index",
+                "text": "关于",
+                "iconPath": "/static/img/info.png",
+                "selectedIconPath": "/static/img/info_active.png"
+            }
+        ]
+    }
+}

@@ -1,0 +1,6 @@
+<view class="page-about">
+    <view class="about-box">
+        <image class="logo" src="/static/img/logo.jpg" />
+        <view class="text">©nicetool.net</view>
+    </view>
+</view>

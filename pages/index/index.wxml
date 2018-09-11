@@ -1,0 +1,28 @@
+<view class="page-home">
+    <view class="app-list">
+        <view class="item">
+            <navigator class="link" url="/pages/run/run">
+                <image class="icon" src="/static/img/map.svg" />
+                <view class="text">跑步测距</view>
+            </navigator>
+        </view>
+        <view class="item">
+            2
+        </view>
+        <view class="item">
+            3
+        </view>
+    </view>
+    <!-- <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+            获取头像昵称
+        </button>
+        <block wx:else>
+            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+    </view>
+    <view class="usermotto">
+        <text class="user-motto">{{motto}}</text>
+    </view> -->
+</view>
