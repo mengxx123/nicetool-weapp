@@ -1,5 +1,7 @@
-//app.js
+import http from './utils/http'
+
 App({
+    http,
     onLaunch: function () {
         // 展示本地存储能力
         var logs = wx.getStorageSync('logs') || []

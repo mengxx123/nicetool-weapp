@@ -1,0 +1,8 @@
+<view class="page-home">
+    <view class="container">
+        <textarea class="ui-textarea" value="{{ form.text }}" bindinput="onInput" placeholder="输入文本"></textarea>
+        <view></view>
+        <view class="btn" bindtap="make">简体字</view>
+        <view wx:if="{{ result }}" data-text="{{ result }}" bindtap="_copy">{{ result }}</view>
+    </view>
+</view>

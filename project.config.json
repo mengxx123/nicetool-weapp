@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
@@ -47,7 +47,37 @@
 				{
 					"id": -1,
 					"name": "关于",
-					"pathName": "pages/about/index"
+					"pathName": "pages/about/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "举牌",
+					"pathName": "pages/tool/up",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "百度",
+					"pathName": "pages/tool/baidu",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "繁体字",
+					"pathName": "pages/tool/baidu",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "繁体字",
+					"pathName": "pages/tool/chinese",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "计数器",
+					"pathName": "pages/tool/counter"
 				}
 			]
 		}

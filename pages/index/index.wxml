@@ -1,16 +1,20 @@
 <view class="page-home">
+    <view class="search-box">
+        <input class="input" bindinput="onInput" value="{{ keyword }}" />
+        <view class="search iconfont icon-search" bindtap="search"></view>
+    </view>
+    <view class="result" wx:if="{{ result }}">
+        <view class="text" wx:if="{{ result.type === 'text' }}">
+            {{ result.data }}
+        </view>
+        <view class="result" wx:else>不支持的类型</view>
+    </view>
     <view class="app-list">
-        <view class="item">
-            <navigator class="link" url="/pages/run/run">
-                <image class="icon" src="/static/img/map.svg" />
-                <view class="text">跑步测距</view>
+        <view class="item" wx:for="{{ apps }}">
+            <navigator class="link" url="{{ item.url }}">
+                <image class="icon" src="{{ item.icon }}" />
+                <view class="text">{{ item.name }}</view>
             </navigator>
-        </view>
-        <view class="item">
-            2
-        </view>
-        <view class="item">
-            3
         </view>
     </view>
     <!-- <view class="userinfo">

@@ -25,3 +25,31 @@
 .app-list .text {
     text-align: center;
 }
+.search-box {
+    display: flex;
+    width: 720rpx;
+    height: 80rpx;
+    margin: 80rpx auto;
+    background-color: #fff;
+    box-shadow: 0 1px 6px rgba(0,0,0,.117647), 0 1px 4px rgba(0,0,0,.117647);
+    border-radius: 8rpx;
+}
+.search-box .input {
+    flex-grow: 1;
+    padding-left: 16rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    height: 80rpx;
+}
+.search-box .search {
+    width: 80rpx;
+    text-align: center;
+    line-height: 80rpx;
+    height: 80rpx;
+    font-size: 40rpx;
+}
+.result {
+    margin-bottom: 24rpx;
+    padding: 24rpx;
+    box-shadow: 0 1px 6px rgba(0,0,0,.117647), 0 1px 4px rgba(0,0,0,.117647);
+}

@@ -2,7 +2,14 @@
     "pages":[
         "pages/index/index",
         "pages/about/index",
-        "pages/run/run"
+        "pages/run/run",
+        "pages/upCase/upCase",
+        "pages/tool/up",
+        "pages/tool/baidu",
+        "pages/tool/chinese",
+        "pages/tool/calculator",
+        "pages/tool/counter",
+        "pages/money/index"
     ],
     "window":{
         "backgroundTextStyle":"light",

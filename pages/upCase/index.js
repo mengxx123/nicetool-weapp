@@ -1,4 +1,4 @@
-// pages/about.js
+// pages/upCase/index.js
 Page({
 
   /**

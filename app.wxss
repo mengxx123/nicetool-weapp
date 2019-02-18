@@ -1,5 +1,6 @@
 /**app.wxss**/
 scroll-view,
+textarea,
 view,
 text,
 image {
@@ -16,3 +17,22 @@ image {
     padding: 200rpx 0;
     box-sizing: border-box;
 } 
+
+
+@font-face {
+    font-family: 'iconfont';  /* project id 832993 */
+    src: url('//at.alicdn.com/t/font_832993_6ogv3r0yxbi.eot');
+    src: url('//at.alicdn.com/t/font_832993_6ogv3r0yxbi.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_832993_6ogv3r0yxbi.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_832993_6ogv3r0yxbi.woff') format('woff'),
+    url('//at.alicdn.com/t/font_832993_6ogv3r0yxbi.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_832993_6ogv3r0yxbi.svg#iconfont') format('svg');
+  }
+  .iconfont {
+    font-family:"iconfont" !important;
+    font-size:inherit;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.iconfont.icon-search:before { content: "\e600"; }
