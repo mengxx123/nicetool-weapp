@@ -9,6 +9,8 @@
         "pages/tool/chinese",
         "pages/tool/calculator",
         "pages/tool/counter",
+        "pages/tool/scan",
+        "pages/test/index",
         "pages/money/index"
     ],
     "window":{

@@ -21,7 +21,3 @@
     color: #999;
     text-align: center;
 }
-.result {
-    font-size: 100rpx;
-    margin: 80rpx 0;
-}

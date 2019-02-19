@@ -1,0 +1,6 @@
+<view class="page-home">
+    <view class="container">
+        <view class="btn" bindtap="scan">扫描</view>
+        <view wx:if="{{ result }}" data-text="{{ result }}" bindtap="_copy">{{ result }}</view>
+    </view>
+</view>

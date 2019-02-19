@@ -1,14 +1,19 @@
 <view class="page-home">
     <view class="search-box">
-        <input class="input" bindinput="onInput" value="{{ keyword }}" />
+        <input class="input" bindinput="onInput" value="{{ keyword }}" placeholder="输入命令" />
         <view class="search iconfont icon-search" bindtap="search"></view>
     </view>
-    <view class="result" wx:if="{{ result }}">
-        <view class="text" wx:if="{{ result.type === 'text' }}">
+    <view class="result" wx:if="{{ result && result.type !== 'empty' }}">
+        <view class="text" wx:if="{{ result.type === 'text' }}" data-text="{{ result.data }}" bindtap="_copy">
             {{ result.data }}
         </view>
-        <view class="result" wx:else>不支持的类型</view>
+        <view class="text" wx:if="{{ result.type === 'image' }}">
+            <image class="text" src="{{ result.data }}" mode="aspectFit" wx:if="{{ result.type === 'image' }}" bindtap="download" />
+            <view class="tip">点击图片，再长按保存</view>
+        </view>
     </view>
+    <view class="result-empty" wx:if="{{ result.type === 'empty'}}">命令找不到</view>
+
     <view class="app-list">
         <view class="item" wx:for="{{ apps }}">
             <navigator class="link" url="{{ item.url }}">

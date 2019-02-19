@@ -7,7 +7,7 @@ Page(pageExtend(commonPage, {
         form: {
             text: ''
         },
-        result: ''
+        result: 0
     },
     onLoad() {
         this._init()
@@ -18,28 +18,9 @@ Page(pageExtend(commonPage, {
             form: this.data.form
         })
     },
-    make() {
-        if (!this.data.form.text) {
-            this._error('请输入文本')
-            return
-        }
-        if (!this.data.form.text.length > 30) {
-            this._error('不能超过 30 个字')
-            return
-        }
-        let url = `http://nodeapi.yunser.net/web_cmd?keyword=` + encodeURIComponent('计算 ' + this.data.form.text)
-        app.http.get(url)
-        .then(res => {
-            let data = res.data
-            console.log('返回', data)
-            this.setData({
-                result: data.data
-            })
-        }, res => {
-            this._error(res.msg)
-            this.setData({
-                loadingState: 'error',
-            })
+    add() {
+        this.setData({
+            result: this.data.result + 1
         })
     },
     download() {

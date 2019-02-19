@@ -27,7 +27,7 @@ Page(pageExtend(commonPage, {
             this._error('不能超过 30 个字')
             return
         }
-        let url = `http://nodeapi.yunser.net/web_cmd?keyword=` + encodeURIComponent('简体 ' + this.data.form.text)
+        let url = `https://nodeapi.yunser.net/web_cmd?keyword=` + encodeURIComponent('简体 ' + this.data.form.text)
         app.http.get(url)
         .then(res => {
             let data = res.data

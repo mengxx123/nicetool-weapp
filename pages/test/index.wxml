@@ -1,0 +1,3 @@
+<view class="page-home">
+    <web-view src="https://robot.yunser.com/functions?embed=true"></web-view>
+</view>
