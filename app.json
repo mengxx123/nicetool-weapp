@@ -10,7 +10,9 @@
         "pages/tool/calculator",
         "pages/tool/counter",
         "pages/tool/scan",
+        "pages/app/index",
         "pages/test/index",
+        "pages/browser/index",
         "pages/money/index"
     ],
     "window":{
@@ -28,6 +30,12 @@
                 "text": "首页",
                 "iconPath": "/static/img/home.png",
                 "selectedIconPath": "/static/img/home_active.png"
+            },
+            {
+                "pagePath": "pages/app/index",
+                "text": "应用",
+                "iconPath": "/static/img/app.png",
+                "selectedIconPath": "/static/img/app_active.png"
             },
             {
                 "pagePath": "pages/about/index",

@@ -1,0 +1,63 @@
+.app-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 24rpx;
+    padding-left: 24rpx;
+}
+.app-list .item {
+    width: 344rpx;
+    margin-right: 16rpx;
+    margin-bottom: 16rpx;
+    padding: 24rpx;
+    box-shadow: 0 1px 6px rgba(0,0,0,.117647), 0 1px 4px rgba(0,0,0,.117647);
+}
+.app-list .link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.app-list .icon {
+    display: block;
+    width: 160rpx;
+    height: 160rpx;
+    margin: 0 auto 8rpx auto;
+}
+.app-list .text {
+    text-align: center;
+}
+.search-box {
+    display: flex;
+    /* width: 720rpx; */
+    height: 80rpx;
+    margin: 80rpx 24rpx;
+    background-color: #fff;
+    box-shadow: 0 1px 6px rgba(0,0,0,.117647), 0 1px 4px rgba(0,0,0,.117647);
+    border-radius: 8rpx;
+}
+.search-box .input {
+    flex-grow: 1;
+    padding-left: 16rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    height: 80rpx;
+}
+.search-box .search {
+    width: 80rpx;
+    text-align: center;
+    line-height: 80rpx;
+    height: 80rpx;
+    font-size: 40rpx;
+}
+.result {
+    margin: 0 24rpx 24rpx 24rpx;
+    padding: 24rpx;
+    box-shadow: 0 1px 6px rgba(0,0,0,.117647), 0 1px 4px rgba(0,0,0,.117647);
+}
+.tip {
+    text-align: center;
+    color: #999;
+}
+.result-empty {
+    padding: 0 24rpx;
+    color: #f00;
+}

@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
+			"current": 8,
 			"list": [
 				{
 					"id": -1,
@@ -84,7 +84,13 @@
 				{
 					"id": -1,
 					"name": "测试",
-					"pathName": "pages/test/index"
+					"pathName": "pages/test/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "应用",
+					"pathName": "pages/app/index"
 				}
 			]
 		}
