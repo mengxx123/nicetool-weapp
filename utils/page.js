@@ -43,8 +43,9 @@ export const commonPage = {
         _pullState: '',
         _pullText: '',
     },
-    _init() {
+    _init(options = {}) {
         console.log('created')
+        this.data._options = options
 
         let isIphoneX = false
         let top

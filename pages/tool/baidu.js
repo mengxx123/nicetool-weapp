@@ -1,4 +1,5 @@
 import { pageExtend, commonPage } from '../../utils/page'
+import config from '../../config/index'
 
 const app = getApp()
 
@@ -27,7 +28,7 @@ Page(pageExtend(commonPage, {
             this._error('不能超过 30 个字')
             return
         }
-        let url = `https://nodeapi.yunser.net/baidu?text=` + encodeURIComponent(this.data.form.text)
+        let url = config.apiDomain + `/baidu?text=` + encodeURIComponent(this.data.form.text)
         app.http.get(url)
         .then(res => {
             let data = res.data

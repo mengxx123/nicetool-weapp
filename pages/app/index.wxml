@@ -1,7 +1,7 @@
 <view class="page-home">
     <view class="app-list">
         <view class="item" wx:for="{{ apps }}">
-            <view class="link" data-url="{{ item.url }}" bindtap="openBrowser">
+            <view class="link" data-item="{{ item }}" bindtap="openBrowser">
                 <image class="icon" src="{{ item.icon }}" />
                 <view class="text">{{ item.name }}</view>
             </view>

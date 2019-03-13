@@ -1,11 +1,17 @@
+let common = {
+    appName: '好工具Lite'
+}
+
 // 开发测试
 const dev = {
+    ...common,
     apiDomain: 'https://biz-web.dev.weyatech.cn',
     env: 'dev'
 }
 
 // 正式
 const pro = {
+    ...common,
     apiDomain: 'https://miop-staging.weyatech.cn/biz-web',
     env: 'staging'
 }

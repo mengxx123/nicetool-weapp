@@ -1,5 +1,6 @@
 
 import { pageExtend, commonPage } from '../../utils/page'
+import config from '../../config/index'
 
 const app = getApp()
 
@@ -54,8 +55,8 @@ Page(pageExtend(commonPage, {
         hasUserInfo: false,
         canIUse: wx.canIUse('button.open-type.getUserInfo')
     },
-    onLoad() {
-        this._init()
+    onLoad(options = {}) {
+        this._init(options)
 
         if (app.globalData.userInfo) {
             this.setData({
@@ -95,7 +96,7 @@ Page(pageExtend(commonPage, {
             this._error('请输入命令')
             return
         }
-        let url = `https://nodeapi.yunser.net/web_cmd?keyword=` + encodeURIComponent(this.data.keyword)
+        let url = config.apiDomain + `/web_cmd?keyword=` + encodeURIComponent(this.data.keyword)
         app.http.get(url)
         .then(res => {
             let data = res.data

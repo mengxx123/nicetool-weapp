@@ -17,13 +17,13 @@
     ],
     "window":{
         "backgroundTextStyle":"light",
-        "navigationBarBackgroundColor": "#4285f4",
+        "navigationBarBackgroundColor": "#2ba246",
         "navigationBarTitleText": "好工具（NiceTool）",
         "navigationBarTextStyle": "#fff"
     },
     "tabBar": {
         "color": "#999",
-        "selectedColor": "#4285f4",
+        "selectedColor": "#2ba246",
         "list": [
             {
                 "pagePath": "pages/index/index",

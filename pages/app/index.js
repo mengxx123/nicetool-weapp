@@ -1,5 +1,6 @@
 
 import { pageExtend, commonPage } from '../../utils/page'
+import config from '../../config/index'
 
 const app = getApp()
 
@@ -8,38 +9,43 @@ Page(pageExtend(commonPage, {
         keyword: '',
         result: null,
         apps: [
-            {
-                name: 'PING',
-                icon: 'https://network.yunser.com/static/img/network_ping.svg',
-                url: 'https://network.yunser.com/ping?embed=force&utm_source=nicetoolweapp'
-            },
-            {
-                name: '域名查 IP',
-                icon: 'https://network.yunser.com/static/img/ip.svg',
-                url: 'https://network.yunser.com/domain?embed=force&utm_source=nicetoolweapp'
-            },
-            {
-                name: '身份证号查询',
-                icon: 'https://life.yunser.com/static/img/id_card.svg',
-                url: 'https://life.yunser.com/id_card?embed=force&utm_source=nicetoolweapp'
-            },
-            {
-                name: '对对联',
-                icon: 'https://chinese.yunser.com/static/img/copybook.svg',
-                url: 'https://chinese.yunser.com/couplet?embed=force&utm_source=nicetoolweapp'
-            },
-            
+            // {
+            //     name: 'PING',
+            //     icon: 'https://network.yunser.com/static/img/network_ping.svg',
+            //     url: 'https://network.yunser.com/ping?embed=force&utm_source=nicetoolweapp'
+            // },
+            // {
+            //     name: '域名查 IP',
+            //     icon: 'https://network.yunser.com/static/img/ip.svg',
+            //     url: 'https://network.yunser.com/domain?embed=force&utm_source=nicetoolweapp'
+            // },
+            // {
+            //     name: '身份证号查询',
+            //     icon: 'https://life.yunser.com/static/img/id_card.svg',
+            //     url: 'https://life.yunser.com/id_card?embed=force&utm_source=nicetoolweapp'
+            // },
+            // {
+            //     name: '对对联',
+            //     icon: 'https://chinese.yunser.com/static/img/copybook.svg',
+            //     url: 'https://chinese.yunser.com/couplet?embed=force&utm_source=nicetoolweapp'
+            // },
         ],
     },
-    onLoad() {
-        this._init()
+    onLoad(options = {}) {
+        this._init(options)
 
-        app.http.get('https://nodeapi.yunser.net/weapps')
+        app.http.get(config.apiDomain + '/weapps')
             .then(res => {
                 let data = res.data
                 console.log('返回', data)
                 this.setData({
-                    apps: data
+                    apps: data.concat([
+                        {
+                            name: '超时计算器',
+                            icon: 'https://supermarket.yunser.com/static/img/down.svg',
+                            url: 'https://supermarket.yunser.com/supermarket?embed=force&utm_source=nicetoolweapp'
+                        }
+                    ])
                 })
             }, res => {
                 this._error(res.msg)
@@ -69,9 +75,15 @@ Page(pageExtend(commonPage, {
     //     }
     // },
     openBrowser(e) {
-        let {url} = e.currentTarget.dataset
+        let { item } = e.currentTarget.dataset
         wx.navigateTo({
-            url: '/pages/browser/index?url=' + encodeURIComponent(url)
+            url: `/pages/browser/index?url=${encodeURIComponent(item.url)}&title=${encodeURIComponent(item.title)}` 
         })
+    },
+    onShareAppMessage: (res) => {
+        return {
+            title: `应用 - ${config.appName}`,
+            path: '/pages/app/index',
+        }
     }
 }))
