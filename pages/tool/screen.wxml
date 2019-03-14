@@ -1,0 +1,9 @@
+<view class="page-home">
+    <view class="container">
+        <textarea class="ui-textarea" value="{{ form.text }}" bindinput="onInput" placeholder="输入文本"></textarea>
+        <view></view>
+        <view class="btn" bindtap="make">生成</view>
+        <image src="{{ result }}" mode="aspectFit" wx:if="{{ result }}" bindtap="download" />
+        <!-- <view class="tip">点击下载图片</view> -->
+    </view>
+</view>

@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 8,
+			"current": 9,
 			"list": [
 				{
 					"id": -1,
@@ -90,7 +90,13 @@
 				{
 					"id": -1,
 					"name": "应用",
-					"pathName": "pages/app/index"
+					"pathName": "pages/app/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "白屏",
+					"pathName": "pages/tool/screen"
 				}
 			]
 		}

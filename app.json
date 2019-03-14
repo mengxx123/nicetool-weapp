@@ -4,12 +4,15 @@
         "pages/about/index",
         "pages/run/run",
         "pages/upCase/upCase",
+        
         "pages/tool/up",
         "pages/tool/baidu",
         "pages/tool/chinese",
         "pages/tool/calculator",
         "pages/tool/counter",
         "pages/tool/scan",
+        "pages/tool/screen",
+
         "pages/app/index",
         "pages/test/index",
         "pages/browser/index",

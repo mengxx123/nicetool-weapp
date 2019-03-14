@@ -10,6 +10,11 @@ Page(pageExtend(commonPage, {
         result: null,
         apps: [
             {
+                name: '白屏',
+                icon: '/static/icon/tool.svg',
+                url: '/pages/tool/screen'
+            },
+            {
                 name: '小人举牌',
                 icon: '/static/icon/tool.svg',
                 url: '/pages/tool/up'
