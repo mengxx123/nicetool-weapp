@@ -1,8 +1,9 @@
 //index.js
 //获取应用实例
 const app = getApp()
+import { pageExtend, commonPage } from '../../utils/page'
 
-Page({
+Page(pageExtend(commonPage, {
   data: {
     motto: 'Hello World',
     userInfo: {},
@@ -16,6 +17,7 @@ Page({
     })
   },
   onLoad: function () {
+    this._init()
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -51,4 +53,4 @@ Page({
       hasUserInfo: true
     })
   }
-})
+}))
